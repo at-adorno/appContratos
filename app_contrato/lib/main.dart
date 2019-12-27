@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:app_contrato/acionamentos.dart';
+import 'package:app_contrato/contratos.dart';
+import 'package:app_contrato/detalhe.dart';
+import 'package:app_contrato/indicadores.dart';
 
 class TabbedAppBarSample extends StatelessWidget {
   @override
@@ -9,8 +13,11 @@ class TabbedAppBarSample extends StatelessWidget {
         length: choices.length,
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('app_contratos'),
+            title: Text('app_contrato'),
+            leading: Image.asset('assets/images/caixa_logo.png', fit: BoxFit.fill),
             centerTitle: true,
+            backgroundColor: Colors.blue,
+            elevation: 5,
             bottom: TabBar(
               isScrollable: true,
               indicatorColor: Colors.orange,
