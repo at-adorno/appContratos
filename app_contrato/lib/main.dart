@@ -4,13 +4,18 @@ class TabbedAppBarSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: choices.length,
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('app_contratos'),            
+            title: const Text('app_contratos'),
+            centerTitle: true,
             bottom: TabBar(
               isScrollable: true,
+              indicatorColor: Colors.orange,
+              indicatorSize: TabBarIndicatorSize.label,
+              indicatorWeight: 10,
               tabs: choices.map((Choice choice) {
                 return Tab(
                   text: choice.title,
