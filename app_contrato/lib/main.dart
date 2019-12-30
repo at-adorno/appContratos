@@ -46,17 +46,18 @@ class TabbedAppBarSample extends StatelessWidget {
 }
 
 class Choice {
-  const Choice({this.title, this.icon});
+  const Choice({this.title, this.icon, this.tela});
 
   final String title;
   final IconData icon;
+  final int tela;
 }
 
 const List<Choice> choices = const <Choice>[
-  const Choice(title: 'Contratos', icon: Icons.list),
-  const Choice(title: 'Detalhe', icon: Icons.subject),
-  const Choice(title: 'Acionamentos', icon: Icons.phonelink),
-  const Choice(title: 'Indicadores', icon: Icons.thumbs_up_down),
+  const Choice(title: 'Contratos', icon: Icons.list, tela: 1),
+  const Choice(title: 'Detalhe', icon: Icons.subject, tela: 2),
+  const Choice(title: 'Acionamentos', icon: Icons.phonelink, tela: 3),
+  const Choice(title: 'Indicadores', icon: Icons.thumbs_up_down, tela: 4),
 ];
 
 class ChoiceCard extends StatelessWidget {
@@ -66,21 +67,17 @@ class ChoiceCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle textStyle = Theme.of(context).textTheme.display1;
     return Card(
-      color: Colors.white,
-      child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Icon(choice.icon, size: 128.0, color: textStyle.color),
-            Text(choice.title, style: textStyle),
-          ],
-        ),
-      ),
+      child: _selecionaTela(choice.tela),
     );
   }
+}
+
+_selecionaTela(int nTela){
+  if (nTela == 1){return TelaContratos();}
+  else if (nTela == 2){return TelaDetalhes();}
+  else if (nTela == 3){return TelaAcionamentos();}
+  else if (nTela == 4){return TelaIndicadores();}
 }
 
 void main() {
