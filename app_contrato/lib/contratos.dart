@@ -30,7 +30,7 @@ class TelaContratos extends StatelessWidget{
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Icon(Icons.check_box, size: 50),
+              child: Icon(Icons.check_circle, size: 50),
             ),
           ],
         ),
@@ -56,7 +56,7 @@ class TelaContratos extends StatelessWidget{
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Icon(Icons.check_box_outline_blank, size: 50),
+              child: Icon(Icons.check_circle_outline, size: 50),
             ),
           ],
         ),
