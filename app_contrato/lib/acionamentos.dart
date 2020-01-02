@@ -1,12 +1,27 @@
 import 'package:flutter/material.dart';
 
 class TelaAcionamentos extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
+        Row(
+          children: [
+            Column(
+              children: [
+                Text(
+                  'Fóton 08664/2018',
+                  style: Theme.of(context).textTheme.headline,
+                  textAlign: TextAlign.right,
+                ),
+              ],
+            ),
+          ],
+        ),
+        Divider(height: 10.0, color: Colors.black,),
         Row(
           children: [
             Padding(
@@ -50,6 +65,7 @@ class TelaAcionamentos extends StatelessWidget {
             Icon(Icons.history),
           ],
         ),
+        Divider(height: 10.0, color: Colors.black,),
         Row(
           children: [
             Padding(
@@ -93,6 +109,7 @@ class TelaAcionamentos extends StatelessWidget {
             Icon(Icons.history),
           ],
         ),
+        Divider(height: 10.0, color: Colors.black,),
         Row(
           children: [
             Padding(
